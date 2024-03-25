@@ -1,23 +1,21 @@
-// Task 41
-// Megician: make a array of megicians names. pass the array to a function
-// Called show_megician(), which prints the name of each megician in the array
-function show_megician(megicians) {
-    for (var _i = 0, megicians_1 = megicians; _i < megicians_1.length; _i++) {
-        var megician = megicians_1[_i];
-        console.log(megician.charAt(0).toUpperCase() + megician.slice(1));
-    }
+// Task 43
+// unchange magician: start with your work from exercise 41. call the function make_graet() with the copy of the array of megician.
+// names. because the original array will be unchanged, return the new array and store it in a seperate array.
+// call show_megician() with each array to show that you have one array of the original names and one array with the great added 
+// to each megicians name
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+function createcar(manufacture, model, optional) {
+    return __assign({ manufacture: manufacture, model: model }, optional);
 }
-// 
-// Task 42const megician: string[] = ["jabir" , "dawood", "rashid"]
-// show_megician(megician)
-// Great megician: start with a copy in your program from exercise 39. write a function called make_great() that modifies
-//  the array of megician by adding the phrase the great to each megicians name. call show_megician () to see the list 
-// has actualy been modified
-function make_great(megicians) {
-    for (var i = 0; i < megicians.length; i++) {
-        megicians[i] = megicians[i] + " the great";
-    }
-}
-var megicians2 = ["jabir", "dawood", "rashid"];
-make_great(megicians2);
-show_megician(megicians2);
+var mycar = createcar("toyota", "corola", { colour: "silver", year: "2024" });
+console.log(mycar);
